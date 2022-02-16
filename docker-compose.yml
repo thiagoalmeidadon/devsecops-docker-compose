@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+    jenkins:
+        image: southsystem/jenkins:lts
+        user: root
+        privileged: true
+        networks:
+            - jenkinsnet
+        volumes:
+            - /home/ubuntu/Jenkins/:/home
+            - /home/ubuntu/Jenkins/Jenkins_data:/var/jenkins_home
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - "8080:8080"
+            - "5000:5000"
+            - "50000:50000"
