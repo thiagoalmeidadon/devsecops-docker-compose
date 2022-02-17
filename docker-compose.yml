@@ -4,8 +4,6 @@ services:
         image: southsystem/jenkins:lts
         user: root
         privileged: true
-        networks:
-            - jenkinsnet
         volumes:
             - /home/ubuntu/Jenkins/:/home
             - /home/ubuntu/Jenkins/Jenkins_data:/var/jenkins_home
