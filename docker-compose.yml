@@ -29,8 +29,6 @@ services:
 
     db:
         image: postgres:alpine
-        networks:
-            - jenkinsnet
         environment:
             - POSTGRES_USER=sonar
             - POSTGRES_PASSWORD=sonar
