@@ -1,11 +1,9 @@
-version: '3.8'
+version: '3.3'
 services:
     jenkins:
         image: jenkinsci/jenkins
         user: root
         privileged: true
-        networks:
-            - jenkinsnet
         volumes:
             - /home/ubuntu/Jenkins/:/home
             - /home/ubuntu/Jenkins/Jenkins_data:/var/jenkins_home
