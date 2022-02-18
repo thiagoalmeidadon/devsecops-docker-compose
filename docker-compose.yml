@@ -14,7 +14,7 @@ services:
             - "50000:50000"
 
     sonarqube:
-        image: southsystem/sonar:latest
+        image: southsystem/sonar:7.4
         ports:
             - "9000:9000"
         environment:
