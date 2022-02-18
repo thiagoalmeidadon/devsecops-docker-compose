@@ -17,8 +17,6 @@ services:
         image: southsystem/sonar:latest
         ports:
             - "9000:9000"
-        networks:
-            - jenkinsnet
         environment:
             - SONARQUBE_JDBC_URL=jdbc:postgresql://db:5432/sonar
         volumes:
