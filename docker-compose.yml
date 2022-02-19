@@ -12,7 +12,6 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
         ports:
             - "8080:8080"
-            - "5000:5000"
             - "50000:50000"
 
     sonarqube:
