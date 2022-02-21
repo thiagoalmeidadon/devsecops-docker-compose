@@ -1,18 +1,5 @@
 version: '3.3'
 services:
-    jenkins:
-        image: jenkins/jenkins
-        networks:
-          - sonarnet
-        user: root
-        privileged: true
-        volumes:
-            - /home/ubuntu/Jenkins/:/home
-            - /home/ubuntu/Jenkins/Jenkins_data:/var/jenkins_home
-            - /var/run/docker.sock:/var/run/docker.sock
-        ports:
-            - "8080:8080"
-            - "50000:50000"
 
     sonarqube:
         image: sonarqube:7.1
@@ -43,7 +30,7 @@ networks:
     driver: bridge
 
 volumes:
-    jenkins-data:
+
     sonarqube_conf:
     sonarqube_data:
     sonarqube_extensions:
